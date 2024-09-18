@@ -211,7 +211,7 @@ class AutomacaoGUI:
 
                 pyautogui.click(pyautogui.locateCenterOnScreen("fotos/recompensa.png", confidence=0.7))
                 sleep(1)
-                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7))
+                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6))
                 sleep(1)
                 pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                 sleep(1)
@@ -221,17 +221,18 @@ class AutomacaoGUI:
             elif pyautogui.locateCenterOnScreen("fotos/ag.png", confidence=0.7): #achou atq gratis 
                 #print("achei ataque gratis")
                 pyautogui.click(pyautogui.locateCenterOnScreen("fotos/ag.png", confidence=0.7))
-                sleep(1)
+                sleep(2)
                 
                         
 
-                if pyautogui.locateCenterOnScreen("fotos/erro.png", confidence=0.7):
+                if pyautogui.locateCenterOnScreen("fotos/erro.png", confidence=0.6):
                     print("Encontrei um erro e estou voltando")
+                    sleep(1)
                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/voltar.png", confidence=0.7)) #da pra melhorar aqui dps
                     sleep(1)
                     braked = True
                 
-                elif pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.7):
+                elif pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.6):
                     
                     #print("Tudo certo, agora vou ver a faccao")
                     sleep(2)
@@ -249,15 +250,15 @@ class AutomacaoGUI:
                             
 
                         
-                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7):
+                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha315.png", confidence=0.7):
                             print("Mecha aceitavel")
-
-                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.7)) #clica no botao de ataque gratis
+                            sleep(0.5)
+                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.6)) #clica no botao de ataque gratis
                             sleep(0.5)
                             pyautogui.click(pyautogui.locateCenterOnScreen("fotos/equipe.png", confidence=0.7)) #clica no botao de equipe
                             sleep(0.5)
-                            if pyautogui.locateCenterOnScreen("fotos/b2.png", confidence=0.9):
-                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/b2.png", confidence=0.9)) #escolhe a equipe
+                            if pyautogui.locateCenterOnScreen("fotos/b2.png", confidence=0.8):
+                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/b2.png", confidence=0.8)) #escolhe a equipe
                                 sleep(0.5)
                                 pyautogui.click(pyautogui.locateCenterOnScreen("fotos/lutar.png", confidence=0.7)) #clica no botao lutar
                                 sleep(6)
@@ -269,12 +270,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -287,8 +288,8 @@ class AutomacaoGUI:
                                         print(f"Mecha:{mechas}")
                                         braked = True
 
-                            elif pyautogui.locateCenterOnScreen("fotos/b22.png", confidence=0.9):
-                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/b22.png", confidence=0.9)) #escolhe a equipe
+                            elif pyautogui.locateCenterOnScreen("fotos/b22.png", confidence=0.8):
+                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/b22.png", confidence=0.8)) #escolhe a equipe
                                 sleep(0.5)
                                 pyautogui.click(pyautogui.locateCenterOnScreen("fotos/lutar.png", confidence=0.7)) #clica no botao lutar
                                 sleep(6)
@@ -300,12 +301,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -336,10 +337,10 @@ class AutomacaoGUI:
                             
 
                         
-                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7):
+                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7):
                             print("Mecha aceitavel")
-
-                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.7))
+                            sleep(0.5)
+                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.6))
                             sleep(0.5)
                             pyautogui.click(pyautogui.locateCenterOnScreen("fotos/equipe.png", confidence=0.7))
                             sleep(0.5)
@@ -356,12 +357,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -387,12 +388,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -406,9 +407,74 @@ class AutomacaoGUI:
                                         braked = True
 
 
+                        elif pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha315.png", confidence=0.7):
+                            print("Mecha aceitavel")
+                            sleep(0.5)
+                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.6))
+                            sleep(0.5)
+                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/equipe.png", confidence=0.7))
+                            sleep(0.5)
+                            if pyautogui.locateCenterOnScreen("fotos/b5.png", confidence=0.9):
+                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/b5.png", confidence=0.9)) #escolhe a equipe
+                                sleep(0.5)
+                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/lutar.png", confidence=0.7)) #clica no botao lutar
+                                sleep(6)
+                                if pyautogui.locateCenterOnScreen("fotos/erro2.png", confidence=0.7):
+                                    sleep(1)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar2.png", confidence=0.7)) #clica em voltar
+                                    sleep(1)
+                                    braked = True
 
+                                else:
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
+                                    sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
+                                        sleep(1)
+                                        mechas += 1
+                                        print(f"Mecha:{mechas}")
+                                        braked = True
+                                    else:
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/voltar.png", confidence=0.7))
+                                        sleep(1)
+                                        mechas += 1
+                                        print(f"Mecha:{mechas}")
+                                        braked = True
 
+                            elif pyautogui.locateCenterOnScreen("fotos/b55.png", confidence=0.9):
+                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/b55.png", confidence=0.9)) #escolhe a equipe
+                                sleep(0.5)
+                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/lutar.png", confidence=0.7)) #clica no botao lutar
+                                sleep(6)
+                                if pyautogui.locateCenterOnScreen("fotos/erro2.png", confidence=0.7):
+                                    sleep(1)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar2.png", confidence=0.7)) #clica em voltar
+                                    sleep(1)
+                                    braked = True
 
+                                else:
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
+                                    sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
+                                        sleep(1)
+                                        mechas += 1
+                                        print(f"Mecha:{mechas}")
+                                        braked = True
+                                    else:
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/voltar.png", confidence=0.7))
+                                        sleep(1)
+                                        mechas += 1
+                                        print(f"Mecha:{mechas}")
+                                        braked = True
 
 
 
@@ -425,10 +491,10 @@ class AutomacaoGUI:
                             
 
                         
-                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7):
+                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha315.png", confidence=0.7):
                             print("Mecha aceitavel")
-
-                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.7))
+                            sleep(0.5)
+                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.6))
                             sleep(0.5)
                             pyautogui.click(pyautogui.locateCenterOnScreen("fotos/equipe.png", confidence=0.7))
                             sleep(0.5)
@@ -445,12 +511,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -476,12 +542,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -513,15 +579,15 @@ class AutomacaoGUI:
                             
 
                         
-                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7):
+                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha315.png", confidence=0.7):
                             print("Mecha aceitavel")
-
-                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.7))
+                            sleep(0.5)
+                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.6))
                             sleep(0.5)
                             pyautogui.click(pyautogui.locateCenterOnScreen("fotos/equipe.png", confidence=0.7))
                             sleep(0.5)
-                            if pyautogui.locateCenterOnScreen("fotos/b1.png", confidence=0.9):
-                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/b1.png", confidence=0.9)) #escolhe a equipe
+                            if pyautogui.locateCenterOnScreen("fotos/b1.png", confidence=0.8):
+                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/b1.png", confidence=0.8)) #escolhe a equipe
                                 sleep(0.5)
                                 pyautogui.click(pyautogui.locateCenterOnScreen("fotos/lutar.png", confidence=0.7)) #clica no botao lutar
                                 sleep(6)
@@ -533,12 +599,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -551,8 +617,8 @@ class AutomacaoGUI:
                                         print(f"Mecha:{mechas}")
                                         braked = True
 
-                            elif pyautogui.locateCenterOnScreen("fotos/b11.png", confidence=0.9):
-                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/b11.png", confidence=0.9)) #escolhe a equipe
+                            elif pyautogui.locateCenterOnScreen("fotos/b11.png", confidence=0.8):
+                                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/b11.png", confidence=0.8)) #escolhe a equipe
                                 sleep(0.5)
                                 pyautogui.click(pyautogui.locateCenterOnScreen("fotos/lutar.png", confidence=0.7)) #clica no botao lutar
                                 sleep(6)
@@ -564,12 +630,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -598,10 +664,10 @@ class AutomacaoGUI:
                             
 
                         
-                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7):
+                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha315.png", confidence=0.7):
                             print("Mecha aceitavel")
-
-                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.7))
+                            sleep(0.5)
+                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.6))
                             sleep(0.5)
                             pyautogui.click(pyautogui.locateCenterOnScreen("fotos/equipe.png", confidence=0.7))
                             sleep(0.5)
@@ -618,12 +684,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -649,12 +715,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -683,10 +749,10 @@ class AutomacaoGUI:
                             
 
                         
-                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7):
+                        elif pyautogui.locateCenterOnScreen("fotos/mecha180.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha200.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha240.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha280.png", confidence=0.7) or pyautogui.locateCenterOnScreen("fotos/mecha315.png", confidence=0.7):
                             print("Mecha aceitavel")
-
-                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.7))
+                            sleep(0.5)
+                            pyautogui.click(pyautogui.locateCenterOnScreen("fotos/atqgratis.png", confidence=0.6))
                             sleep(0.5)
                             pyautogui.click(pyautogui.locateCenterOnScreen("fotos/equipe.png", confidence=0.7))
                             sleep(0.5)
@@ -703,12 +769,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -734,12 +800,12 @@ class AutomacaoGUI:
 
                                 else:
                                     pyautogui.click(pyautogui.locateCenterOnScreen("fotos/skip.png", confidence=0.7)) # clica no botao skipar
+                                    sleep(2)
+                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.6))#clica continuar
                                     sleep(1)
-                                    pyautogui.click(pyautogui.locateCenterOnScreen("fotos/continuar.png", confidence=0.7))#clica continuar
-                                    sleep(1)
-                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
-                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
-                                        sleep(1)
+                                    if pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
+                                        pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
+                                        sleep(2)
                                         pyautogui.click(pyautogui.locateCenterOnScreen("fotos/coletar.png", confidence=0.7))
                                         sleep(1)
                                         mechas += 1
@@ -761,8 +827,10 @@ class AutomacaoGUI:
                 braked = True
 
 
-            elif pyautogui.locateCenterOnScreen("fotos/erro6.png", confidence=0.9):
+            elif pyautogui.locateCenterOnScreen("fotos/erro6.png", confidence=0.7):
                 print("erro 6")
+                sleep(2)
+                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/evento2.png", confidence=0.7)) 
                 sleep(2)
                 pyautogui.click(pyautogui.locateCenterOnScreen("fotos/evento1.png", confidence=0.7)) 
                 sleep(2)
@@ -791,10 +859,10 @@ class AutomacaoGUI:
                 pyautogui.click(pyautogui.locateCenterOnScreen("fotos/reconectar.png", confidence=0.7)) 
                 sleep(1)
 
-            elif pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7):
+            elif pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6):
                 print("recompensa bugada")
                 sleep(1)
-                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.7)) 
+                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/botrec.png", confidence=0.6)) 
                 sleep(1)
 
             elif pyautogui.locateCenterOnScreen("fotos/erro7.png", confidence=0.7):
@@ -802,6 +870,17 @@ class AutomacaoGUI:
                 sleep(1)
                 pyautogui.click(pyautogui.locateCenterOnScreen("fotos/erro7.png", confidence=0.7)) 
                 sleep(1)
+
+            elif pyautogui.locateCenterOnScreen("fotos/mechalocal.png", confidence=0.7):
+                print("mecha local")
+                sleep(1)
+                pyautogui.click(pyautogui.locateCenterOnScreen("fotos/mechachefe.png", confidence=0.7)) 
+                sleep(1)
+
+
+
+
+
 
         self.parar_automacao()
 
@@ -812,8 +891,13 @@ class AutomacaoGUI:
         self.root.destroy()
 
     def write(self, text):
-        # Função para redirecionar o stdout
-        self.txt_output.insert(tk.END, text)
+        if text != '\n':
+            current_time = datetime.now().strftime("%H:%M:%S")
+            formatted_text = f"[{current_time}]{text}"
+            self.txt_output.insert(tk.END, formatted_text)
+        else:
+            self.txt_output.insert(tk.END, text)
+
         self.txt_output.see(tk.END)
 
 
